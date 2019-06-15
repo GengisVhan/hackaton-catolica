@@ -6,13 +6,10 @@ public class ButtonRandom : MonoBehaviour
 {
     public List<Sprite> random_list;
     public int random_key;
-    void Awake() 
-    {
-        this.random_key = Random.Range(0, random_list.Count);
-        this.GetComponent<Image>().sprite = random_list[this.random_key];
-    }
+    public bool updatable;
     void Start()
     {
+        this.updatable = false;
         this.random_key = Random.Range(0, random_list.Count);
         this.GetComponent<Image>().sprite = random_list[this.random_key];
     }
@@ -20,6 +17,11 @@ public class ButtonRandom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(this.updatable)
+        {
+            this.random_key = Random.Range(0, random_list.Count);
+            this.GetComponent<Image>().sprite = random_list[this.random_key];
+            this.updatable = false;
+        }
     }
 }
