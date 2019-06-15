@@ -15,3 +15,13 @@ FIG.1
 FIG.2
 
 ![alt text](https://github.com/GengisVhan/hackaton-catolica/blob/master/imgs/Game_2.PNG "Preparando a comida")
+
+
+##### Primeira Fase: Entregando o alimento
+---
+
+Inspiração foi do Pepsi Man e do paperboy, a ideia foi fazer um endless run, com obstáculas onde o herói que mata a fome entregaria os alimentos nas casa marcadas com a identificação do TonoLucro, mas devido ao tempo e pouca experiência com a ferramenta todos os requisitos não foram atendidos.
+
+FIG.3
+
+![alt text](https://github.com/GengisVhan/hackaton-catolica/blob/master/imgs/jogo%202.png)
