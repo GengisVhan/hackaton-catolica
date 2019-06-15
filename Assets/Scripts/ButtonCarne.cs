@@ -27,17 +27,19 @@ public class ButtonCarne : MonoBehaviour
     public void testClick()
     {
         ButtonRandom random_button=GameObject.Find("Button_Random").GetComponent<ButtonRandom>();
+        ButtonRandomNext random_button_next=GameObject.Find("Button_Random_Next").GetComponent<ButtonRandomNext>();
         Text text_ponto = GameObject.Find("Ponto_Text").GetComponent<Text>();
         print("Minha chave "+this.key);
         print("Chave random "+random_button.random_key);
         int value=0;
         if(this.key == random_button.random_key)
         {
-           print(text_ponto.text);
+            print(text_ponto.text);
             value = int.Parse(text_ponto.text);
             value += 30;
+            print("Ganhou Ponto");
             text_ponto.text = value.ToString();
-            random_button.updatable=true;
+            random_button_next.updatable_next=true;
         }
         else if (this.key != random_button.random_key)
         {
@@ -46,8 +48,8 @@ public class ButtonCarne : MonoBehaviour
             {
                 value = int.Parse(text_ponto.text);
                 value -= 30;
-                text_ponto.text = value.ToString();
                 print("Perdeu Ponto");
+                text_ponto.text = value.ToString();
             }
         }
     }

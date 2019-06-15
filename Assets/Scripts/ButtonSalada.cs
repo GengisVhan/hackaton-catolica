@@ -22,6 +22,7 @@ public class ButtonSalada : MonoBehaviour
     public void testClick()
     {
         ButtonRandom random_button=GameObject.Find("Button_Random").GetComponent<ButtonRandom>();
+        ButtonRandomNext random_button_next=GameObject.Find("Button_Random_Next").GetComponent<ButtonRandomNext>();
         Text text_ponto = GameObject.Find("Ponto_Text").GetComponent<Text>();
         print("Minha chave "+this.key);
         print("Chave random "+random_button.random_key);
@@ -33,7 +34,7 @@ public class ButtonSalada : MonoBehaviour
             value += 30;
             print("Ganhou Ponto");
             text_ponto.text = value.ToString();
-            random_button.updatable=true;
+            random_button_next.updatable_next=true;
         }
         else if (this.key != random_button.random_key)
         {
@@ -45,7 +46,6 @@ public class ButtonSalada : MonoBehaviour
                 print("Perdeu Ponto");
                 text_ponto.text = value.ToString();
             }
-            
         }
     }
 }
